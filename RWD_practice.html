@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <style>
+        .container {
+            max-width: 100%;
+        }
+
+        /* nav */
+        .navbar {
+            display: block;
+            position: relative;
+        }
+
+        .collapse {
+            flex-direction: column;
+        }
+
+        .navbar button[aria-expanded="true"]>span.close {
+            display: inline;
+            color: rgb(139, 138, 138);
+            font-size: 24px;
+            opacity: 1;
+        }
+
+
+        .navbar button[aria-expanded="true"]>span.navbar-toggler-icon {
+            display: none;
+        }
+
+        .navbar button[aria-expanded="false"]>span.close {
+            display: none;
+        }
+
+
+
+        /* logo */
+        .logo-wrap {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: white;
+            top: 80px;
+            right: -70px;
+            z-index: 100;
+            box-shadow: 2px 2px 2px 2px rgb(165, 164, 164);
+        }
+
+        .logo {
+            position: relative;
+        }
+
+        .mouse {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 5px 0 5px 10px;
+            border-color: transparent transparent transparent #9e6d23;
+            position: absolute;
+            right: 15px;
+            top: 45px;
+        }
+
+        .head {
+            width: 53px;
+            height: 50px;
+            background-color: rgb(238, 165, 81);
+            border-radius: 50%;
+            position: absolute;
+            top: 25px;
+            right: 25px;
+        }
+
+        .eye {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: black;
+            position: absolute;
+            top: 37px;
+            right: 35px;
+            z-index: 200;
+        }
+
+        .me {
+            width: 5px;
+            height: 5px;
+            background-color: white;
+            border-radius: 50%;
+        }
+
+        /*  */
+        h3 {
+            margin: 100px auto;
+            font-weight: 800;
+            text-align: center;
+
+        }
+
+
+        a>p {
+
+            color: black;
+            font-weight: 700;
+            text-align: center;
+
+        }
+
+        a>p:hover {
+            color: brown;
+        }
+
+        .img-wrap {
+            height: 620px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+        .main-title {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            padding: 10px 15px;
+        }
+
+        .main-title p {
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        h2 {
+            text-align: right;
+            color: white;
+            font-weight: 700;
+            font-size: 48px;
+        }
+
+        .introduce {
+            background-color: #dfc6a5;
+        }
+
+        .introduce-text {
+            margin: 0 auto;
+            display: flex;
+            margin: 80px 50px;
+        }
+
+        .introduce-text p {
+            writing-mode: vertical-lr;
+            font-size: 36px;
+            font-weight: 700;
+            position: relative;
+        }
+
+        .style01 {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: solid 8px rgba(165, 42, 42, 0.349);
+            top: 37%;
+            left: 28%;
+        }
+
+        .text {
+            width: 250px;
+            margin: 0 auto;
+            font-weight: 700;
+        }
+
+        @media (max-width:980px) {
+
+            .navbar {
+                display: flex;
+            }
+
+            h3 {
+                margin: 20px 0;
+            }
+
+            .mark01 {
+                display: block;
+            }
+
+            .logo-wrap {
+                position: static;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: white;
+                top: 40px;
+                right: -35px;
+                z-index: 100;
+                box-shadow: 2px 2px 2px 2px rgb(165, 164, 164);
+            }
+
+            .logo {
+                position: relative;
+            }
+
+            .mouse {
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 5px 0 5px 10px;
+                border-color: transparent transparent transparent #9e6d23;
+                position: absolute;
+                right: 7.5px;
+                top: 22.5px;
+            }
+
+            .head {
+                width: 26.5px;
+                height: 25px;
+                background-color: rgb(238, 165, 81);
+                border-radius: 50%;
+                position: absolute;
+                top: 12.5px;
+                right: 12.5px;
+            }
+
+            .eye {
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                background-color: black;
+                position: absolute;
+                top: 17px;
+                right: 17.5px;
+                z-index: 200;
+            }
+
+            .me {
+                width: 2.5px;
+                height: 2.5px;
+                background-color: white;
+                border-radius: 50%;
+            }
+
+            .img-wrap {
+                height: 400px;
+            }
+
+            .introduce-text {
+                margin: 0;
+                padding: 30px 10px;
+
+            }
+
+            .style01 {
+                position: absolute;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                border: solid 8px rgba(165, 42, 42, 0.349);
+                top: 80px;
+                left: 90px;
+            }
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="row">
+            <nav class="col-xl-3 col-12 navbar navbar-expand-lg navbar-light ">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="my-1 mx-2 close">X</span>
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+                <h3>白頭翁不吃小米</h3>
+                <div class="logo-wrap">
+                    <div class="logo">
+                        <div class="mouse"></div>
+                        <div class="head"></div>
+                        <div class="eye">
+                            <div class="me">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <a href="" class="nav-link">
+                        <p>白頭翁的特性</p>
+                    </a>
+                    <a href="" class="nav-link">
+                        <p>白頭翁的故事</p>
+                    </a>
+                    <a href="" class="nav-link">
+                        <p>白頭翁的美照</p>
+                    </a>
+                    <a href="" class="nav-link">
+                        <p>白頭翁的危機</p>
+                    </a>
+                </div>
+            </nav>
+            <div class="col-xl-9 col-12">
+                <div class="img-wrap">
+                    <img src="./banner素材.png" alt="">
+                    <div class="main-title">
+                        <h2><span class="mark01">白頭翁</span>(Chinese bulbul)</h2>
+                        <p>又名白頭鵯。以果實、昆蟲為主食，無法消化小米、穀類。平均壽命約8~10年</p>
+                    </div>
+                </div>
+                <div class="introduce d-xl-flex">
+                    <div class="col-xl-4 ">
+                        <div class="introduce-text">
+                            <p class="">外觀</p>
+                            <div class="style01"></div>
+                            <div class="text">
+                                白頭體長約17到22公分，額至頭頂純黑色而富有光澤，兩眼上方至後枕白色，形成一白色枕環。耳羽後部有一白斑，此白環與白斑在黑色的頭部均極為醒目，老鳥的枕羽(後頭部)更潔白，所以又叫「白頭翁﹞。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 ">
+                        <div class="introduce-text">
+                            <p class="">棲地</p>
+                            <div class="style01"></div>
+                            <div class="text">
+                                白頭翁和麻雀、綠繡眼合稱「城市三寶」，常成群結出現在平原區灌木叢、丘陵樹林地帶，以及校園、公園、庭院、行道中的各種高高的電線與樹上。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 ">
+                        <div class="introduce-text">
+                            <p>食性</p>
+                            <div class="style01"></div>
+                            <div class="text">
+                                以果樹的漿果和種子為主食，並時常飛入果園偷吃果實，還會吃嫩葉嫩芽，尤其是胡蝶蘭的嫩葉嫩芽葉，偶爾啄食昆蟲。
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
